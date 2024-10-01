@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Message</title>
+</head>
+<body>
+    <h1>Welcome to the QR Code Voice Trigger!</h1>
+
+    <script>
+        function speakMessage(message) {
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = 'en-US';  // Set language
+            window.speechSynthesis.speak(speech);
+        }
+
+        window.onload = function() {
+            speakMessage("You have successfully scanned the QR code!");
+        };
+    </script>
+</body>
+</html>
